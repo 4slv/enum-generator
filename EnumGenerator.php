@@ -1,8 +1,8 @@
 <?php
 
-namespace Slov\EnumGenerator;
+namespace EnumGenerator;
 
-use Slov\EnumGenerator\Helper\StringHelper;
+use EnumGenerator\Helper\StringHelper;
 
 /** Генератор перечисляемого типа */
 class EnumGenerator
