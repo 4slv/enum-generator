@@ -1,5 +1,5 @@
 # enum-generator
-Генератор кода класса перечисляемого типа Enum [myclabs/php-enum|https://github.com/myclabs/php-enum]
+Генератор кода класса перечисляемого типа Enum [myclabs/php-enum](https://github.com/myclabs/php-enum)
 
 ## Как использовать
 
@@ -28,4 +28,26 @@ $enumGenerator->setClassComment($enumClassComment); // $enumClassComment ком�
 $enumGenerator->setEnumCodeRelativePath($enumCodeDirRelativePath); // $enumCodeDirRelativePath относительный путь к папке
 $enumGenerator->setEnumElementList($enumElementList); // $enumElementList список описания элементов перечисления
 $enumGenerator->generate(); // генерация класса
+```
+
+В результате сгенерируется файл:
+/tmp/enum-generator/Sex.php
+
+со следующим содержимым:
+```php
+<?php
+namespace Enum;
+
+use MyCLabs\Enum\Enum;
+
+/** Пол */
+class Sex extends Enum
+{
+    /** мужчина */
+    const MAN = 'Man';
+
+    /** женщина */
+    const WOMAN = 'Women';
+    
+ }
 ```
