@@ -16,8 +16,8 @@ $enumNamespace = 'Enum';
 $enumClassComment = 'Пол';
 $enumCodeDirRelativePath = 'enum';
 $enumElementList = [
-    (new EnumElement())->setName('MALE')->setValue('Male')->setValue('Мужчина'),
-    (new EnumElement())->setName('FEMALE')->setValue('Female')->setValue('Женщина')
+    (new EnumElement())->setName('MALE')->setValue('Male')->setComment('Мужчина'),
+    (new EnumElement())->setName('FEMALE')->setValue('Female')->setComment('Женщина')
 ];
 
 $enumGenerator = new EnumGenerator();
