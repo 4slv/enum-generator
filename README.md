@@ -5,8 +5,8 @@
 
 **Пример:**
 ```php
-use Slov\EnumGenerator\EnumElement;
-use Slov\EnumGenerator\EnumGenerator;
+use EnumGenerator\EnumElement;
+use EnumGenerator\EnumGenerator;
 
 require_once 'vendor/autoload.php';
 
