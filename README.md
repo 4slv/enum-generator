@@ -43,10 +43,10 @@ use MyCLabs\Enum\Enum;
 /** Пол */
 class Sex extends Enum
 {
-    /** мужчина */
+    /** Мужчина */
     const MAN = 'Man';
 
-    /** женщина */
+    /** Женщина */
     const WOMAN = 'Women';
     
  }
