@@ -1,1 +1,22 @@
-
+{
+    "name": "x5hell/enum-generator",
+    "description": "emun class code generator",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexey Dobrynin",
+            "email": "gopooop@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "myclabs/php-enum": "1.5.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "EnumGenerator\\": "/"
+        }
+    }
+}
