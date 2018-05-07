@@ -1,6 +1,6 @@
 <?php
 
-namespace Slov\EnumGenerator;
+namespace EnumGenerator;
 
 /** Элемент перечисляемого типа */
 class EnumElement
