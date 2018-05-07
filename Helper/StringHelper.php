@@ -1,6 +1,6 @@
 <?php
 
-namespace Slov\EnumGenerator\Helper;
+namespace EnumGenerator\Helper;
 
 
 class StringHelper
