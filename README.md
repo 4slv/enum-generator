@@ -21,13 +21,14 @@ $enumElementList = [
 ];
 
 $enumGenerator = new EnumGenerator();
-$enumGenerator->setProjectPath($projectPath); // $projectPath абсолютный путь к папке проекта
-$enumGenerator->setClassName($enumClassName); // $enumClassName название класса с перечислениями
-$enumGenerator->setEnumNamespace($enumNamespace); // $enumNamespace пространство имен класса с перечислениями
-$enumGenerator->setClassComment($enumClassComment); // $enumClassComment комментарий к классу с перечислениями
-$enumGenerator->setEnumCodeRelativePath($enumCodeDirRelativePath); // $enumCodeDirRelativePath относительный путь к папке
-$enumGenerator->setEnumElementList($enumElementList); // $enumElementList список описания элементов перечисления
-$enumGenerator->generate(); // генерация класса
+$enumGenerator
+    ->setProjectPath($projectPath) // $projectPath абсолютный путь к папке проекта
+    ->setClassName($enumClassName) // $enumClassName название класса с перечислениями
+    ->setEnumNamespace($enumNamespace) // $enumNamespace пространство имен класса с перечислениями
+    ->setClassComment($enumClassComment) // $enumClassComment комментарий к классу с перечислениями
+    ->setEnumCodeRelativePath($enumCodeDirRelativePath) // $enumCodeDirRelativePath относительный путь к папке
+    ->setEnumElementList($enumElementList) // $enumElementList список описания элементов перечисления
+    ->generate(); // генерация класса
 ```
 
 В результате сгенерируется файл:
