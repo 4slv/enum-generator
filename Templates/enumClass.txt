@@ -1,0 +1,10 @@
+<?php
+namespace %namespace%;
+
+use MyCLabs\Enum\Enum;
+
+%classComment%
+class %className% extends Enum
+{
+%classConstants%
+}
