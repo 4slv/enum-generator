@@ -44,11 +44,12 @@ use MyCLabs\Enum\Enum;
 /** Пол */
 class Sex extends Enum
 {
-    /** Мужчина */
-    const MAN = 'Man';
+    /** Мужчина */
+    const MALE = 'Male';
 
-    /** Женщина */
-    const WOMAN = 'Women';
-    
- }
+    /** Женщина */
+    const FEMALE = 'Female';
+
+
+}
 ```
