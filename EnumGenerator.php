@@ -195,7 +195,7 @@ class EnumGenerator
      */
     protected function formatCommentClass($commentText)
     {
-        return strlen($commentText) > 0 ? ' * '. $commentText : '';
+        return ' * '.(strlen($commentText) > 0 ?  $commentText : '');
     }
 
 
