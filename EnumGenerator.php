@@ -171,6 +171,16 @@ class EnumGenerator
     }
 
     /**
+     * @return string шаблон методы в перечислении
+     */
+    protected function getTemplateEnumMethod()
+    {
+        return $this->getTemplateContent(
+            'enumMethod.txt'
+        );
+    }
+
+    /**
      * @param string $commentText текст комментария
      * @return string комменарий к элементу перечисляемого типа
      */
@@ -180,12 +190,22 @@ class EnumGenerator
     }
 
     /**
+     * @param string $commentText текст комментария
+     * @return string комменарий к элементу перечисляемого типа
+     */
+    protected function formatCommentClass($commentText)
+    {
+        return strlen($commentText) > 0 ? ' * '. $commentText : '';
+    }
+
+
+    /**
      * @return string контент сгенерированного класса
      */
     protected function getClassContent()
     {
         $enumConstantList = '';
-
+        $enumMethodList = [];
         foreach($this->getEnumElementList() as $enumElement){
             $enumConstantList .= StringHelper::replacePatterns(
                 $this->getTemplateEnumConstant(),
@@ -195,15 +215,24 @@ class EnumGenerator
                     '%value%' => $enumElement->getValue()
                 ]
             );
+            $enumMethodList[] = StringHelper::replacePatterns(
+                $this->getTemplateEnumMethod(),
+                [
+                    '%comment%' => $enumElement->getComment(),
+                    '%name%' => $enumElement->getName(),
+                    '%value%' => $enumElement->getValue()
+                ]
+            );
         }
-
+        $enumMethodList = implode(PHP_EOL,$enumMethodList);
         return StringHelper::replacePatterns(
             $this->getTemplateEnumClass(),
             [
                 '%namespace%' => $this->getEnumNamespace(),
-                '%classComment%' => $this->formatComment($this->getClassComment()),
+                '%classComment%' => $this->formatCommentClass($this->getClassComment()),
                 '%className%' => $this->getClassName(),
-                '%classConstants%' => $enumConstantList
+                '%classConstants%' => $enumConstantList,
+                '%classMethod%' => $enumMethodList
             ]
         );
     }

@@ -3,7 +3,10 @@ namespace %namespace%;
 
 use MyCLabs\Enum\Enum;
 
+/**
 %classComment%
+%classMethod%
+ */
 class %className% extends Enum
 {
 %classConstants%
